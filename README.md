@@ -1,46 +1,171 @@
-# Getting Started with Create React App
+# Data Layer
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) TS template.
+## Data
 
-## Available Scripts
+- UsersContext
+  - Users list
+    - Friends list
+    - Enemies list
+  - User profile:
+    - Name
+    - ID
+    - Image
+    - Bio(info the user opcional)
+    - Array of friends
+    - Array of enemies
+- UIContext
+  - isLoading
+  - isError
+  - isAdded
+  - isDeleted
+  - isFriend
+  - isEnemy
 
-In the project directory, you can run:
+## Receive interactions
 
-### `npm start`
+- UsersContext
+  - loadUsers - Array of users
+  - addFriend - Add user to the array of friends users
+  - addEnemy - Add user to the array of enemies users
+  - removeFriend - Remove user from the array of friend users
+  - remoseEnemy - Remove user from the array of friends users
+  - editUser - Update the user profile
+  - registerUser - Add new user to database
+- UiContext
+  - setIsLoadingTrue
+  - setIsLoadingFalse
+  - setIsErrorTrue
+  - setIsErrorFalse
+  - setIsAdded
+  - setIsDeleted
+  - setIsFriend
+  - setIsEnemy
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+# Components
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## APP
 
-### `npm test`
+### Show data
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Header component
+- Nav-bar
+- LoginPage before user
+- Link RegisterPage
+- HomePage when user is logged in
+- FormPage when user wants to update profile
+- NotFoundPage when user tries to navigate to unknown path
+- Loading component while loading pages
+- Modal to show feedback and error messages
 
-### `npm run build`
+## LoginPage
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Show data
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Form component with inputs:
+  - Username
+  - Password
+  - Image
+- Button component with “entrar” text
+- Link to RegisterPage "¿No tienes una cuenta? Regístrate"
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Receive interactions
 
-### `npm run eject`
+- Submit form on click
+- Navigate ro RegisterPage on click
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+###
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## RegisterPage
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Show data
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- Form component with inputs:
+  - Username
+  - Password
+  - Image
+  - Button component with “Registrate” text
+- Link to loginPage
 
-## Learn More
+### Receive interactions
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Submit form on click
+- Navigate to loginPage on click
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## HomePage
+
+### Show data
+
+- Heading level 2 with text “InstaFake”
+- Nav-var
+- usersList component
+
+##
+
+## UsersList
+
+### Show data
+
+- A userCard component for each user in the list
+
+## Nav-bar
+
+### Show data
+
+- link :
+  - friends
+  - enemies”
+  - explorar amigos
+  - perfil
+
+### Receive interactions
+
+- Navigate roPages on click
+
+## UserCard
+
+### Show data
+
+- Username
+- image
+- Bio ( text)
+- Radio button with 3 options:
+  - Deleted
+  - Friend
+  - Enemy
+
+### Receive interactions
+
+- Toggle relationship status on selection
+
+### Receive interactions
+
+- Toggle relationship status on selection
+
+## NotFoundPage
+
+### Show data
+
+- Heading level 1 component with text “404 not found page”
+- Link to LoginPage or Homepage
+
+### Receive interactions
+
+- Navigate to LoginPage or HomePage on click
+
+## Button
+
+### Show data
+
+- Show the text received inside the button.
+
+### Get actions
+
+- Call the received action on click.
+
+# InstaFakes
+
+###
+
+###
+
+![planing.png](planing-fronted-red-social.png)
