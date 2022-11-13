@@ -8,7 +8,6 @@ function App() {
       <AppStyled>
         <Header />
       </AppStyled>
-      ;
     </>
   );
 }
