@@ -1,5 +1,4 @@
-/* eslint-disable jsx-a11y/anchor-has-content */
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import useUser, { UserCredencials } from "../../hooks/useUser";
 import { FormStyled, FormField, ButtonStyled, FormActions } from "./FormStyled";
 
