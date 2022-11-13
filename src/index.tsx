@@ -3,7 +3,7 @@ import { createRoot } from "react-dom/client";
 import { Provider } from "react-redux";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import { store } from "./features/store";
+import { store } from "./redux/store";
 import GlobalStyle from "./styles/GlobalStyle";
 import { ThemeProvider } from "styled-components";
 import mainTheme from "./styles/mainTheme";
