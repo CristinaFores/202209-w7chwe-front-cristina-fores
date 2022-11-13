@@ -8,7 +8,7 @@ const useToken = () => {
   const dispatch = useAppDispatch();
 
   const getToken = useCallback(() => {
-    const token = localStorage.getItem("token");
+    const token = window.localStorage.getItem("token");
 
     if (token) {
       const user = decodeToken(token);
