@@ -4,6 +4,9 @@ import { Provider } from "react-redux";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { store } from "./features/store";
+import GlobalStyle from "./styles/GlobalStyle";
+import { ThemeProvider } from "styled-components";
+import mainTheme from "./styles/mainTheme";
 
 const container = document.getElementById("root")!;
 const root = createRoot(container);
@@ -11,6 +14,8 @@ const root = createRoot(container);
 root.render(
   <React.StrictMode>
     <Provider store={store}>
+      <ThemeProvider theme={mainTheme}></ThemeProvider>
+      <GlobalStyle />
       <App />
     </Provider>
   </React.StrictMode>

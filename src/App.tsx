@@ -1,7 +1,16 @@
 import React from "react";
+import { AppStyled } from "./AppStyled";
+import Header from "./components/Header/Header";
 
 function App() {
-  return <div className="App"></div>;
+  return (
+    <>
+      <AppStyled>
+        <Header />
+      </AppStyled>
+      ;
+    </>
+  );
 }
 
 export default App;
