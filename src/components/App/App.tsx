@@ -1,6 +1,6 @@
 import { AppStyled } from "./AppStyled";
-import Form from "./components/Form/Form";
-import Header from "./components/Header/Header";
+import Form from "../Form/Form";
+import Header from "../Header/Header";
 
 function App() {
   return (
@@ -8,6 +8,7 @@ function App() {
       <AppStyled>
         <Header />
         <Form />
+        <h3>En construción...</h3>
       </AppStyled>
     </>
   );

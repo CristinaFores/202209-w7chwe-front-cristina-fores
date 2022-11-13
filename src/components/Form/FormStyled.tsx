@@ -14,7 +14,6 @@ export const FormStyled = styled.form`
   border: 1.5px solid rgba(209, 213, 219, 0.3);
   gap: 1rem;
   border-radius: 10px;
-  font-family: "Montserrat", sans-serif;
 `;
 
 export const FormField = styled.div`
