@@ -1,4 +1,3 @@
-import { User } from "../redux/features/userSlice/types";
 import { loginUserActionCreator } from "../redux/features/userSlice/userSlice";
 import { useAppDispatch } from "../redux/hooks";
 import decodeToken, { JwtPayloadCustom } from "../utils/decodeToken";

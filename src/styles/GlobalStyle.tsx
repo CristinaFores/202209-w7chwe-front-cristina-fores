@@ -16,7 +16,7 @@ body {
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
-   background-image: linear-gradient(
+  background-image: linear-gradient(
     rgba(243, 129, 129, 0.9),
     rgba(252, 227, 138, 0.9)
   );
@@ -62,6 +62,5 @@ a {
   color: inherit;
   cursor: pointer;
 }
-  
 `;
 export default GlobalStyle;
