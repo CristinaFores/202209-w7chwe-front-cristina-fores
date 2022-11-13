@@ -9,6 +9,7 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^14.4.3",
     "@types/jest": "^27.5.2",
+    "@types/jwt-decode": "^3.1.0",
     "@types/node": "^17.0.45",
     "@types/react": "^18.0.25",
     "@types/react-dom": "^18.0.8",
@@ -19,7 +20,8 @@
     "react-scripts": "5.0.1",
     "styled-components": "^5.3.6",
     "typescript": "^4.8.4",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "@types/styled-components": "^5.1.26"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -48,10 +50,7 @@
     ]
   },
   "devDependencies": {
-    "@types/styled-components": "^5.1.26",
     "husky": "^8.0.0",
     "msw": "^0.48.2"
   }
-
-  
 }

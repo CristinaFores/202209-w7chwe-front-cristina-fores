@@ -10,7 +10,6 @@ export interface UserCredencials {
 const useUser = () => {
   const dispatch = useAppDispatch();
   const apiUrl = process.env.REACT_APP_API_URL;
-
   const login = async (userData: UserCredencials) => {
     const response = await fetch(`${apiUrl}/users/login`, {
       method: "POST",
@@ -23,11 +22,18 @@ const useUser = () => {
       },
     });
 
-    const { token } = await response.json();
+    const { accessToken } = await response.json();
 
-    const userLogger: JwtPayloadCustom = decodeToken(token);
-    dispatch(loginUserActionCreator({ ...userLogger, token }));
-    localStorage.setItem("token", token);
+    const userLogger: JwtPayloadCustom = decodeToken(accessToken);
+
+    dispatch(
+      loginUserActionCreator({
+        ...userLogger,
+        username: userData.username,
+        token: accessToken,
+      })
+    );
+    window.localStorage.setItem("token", accessToken);
   };
   return {
     login,
