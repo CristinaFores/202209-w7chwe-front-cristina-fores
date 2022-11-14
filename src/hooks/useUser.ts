@@ -21,11 +21,8 @@ const useUser = () => {
         "Content-type": "application/json",
       },
     });
-
     const { token } = await response.json();
-
     const userLogger: JwtPayloadCustom = decodeToken(token);
-
     dispatch(
       loginUserActionCreator({
         ...userLogger,
@@ -35,8 +32,24 @@ const useUser = () => {
     );
     window.localStorage.setItem("token", token);
   };
+
+  const register = async (userData: UserCredencials) => {
+    const responseData = await fetch(`${apiUrl}/users/register`, {
+      method: "POST",
+      body: JSON.stringify(userData),
+      headers: {
+        "Content-type": "application/json",
+      },
+    });
+
+    const { token } = await responseData.json();
+    window.localStorage.setItem("token", token);
+
+    return true;
+  };
   return {
     login,
+    register,
   };
 };
 
