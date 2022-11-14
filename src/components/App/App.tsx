@@ -8,7 +8,6 @@ function App() {
       <AppStyled>
         <Header />
         <Form />
-        <h3>En construción...</h3>
       </AppStyled>
     </>
   );
