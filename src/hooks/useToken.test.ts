@@ -29,7 +29,6 @@ const mockLocalStorage = (() => {
     getItem(key: string) {
       return store[key];
     },
-
     setItem(key: string, value: string) {
       store[key] = value;
     },
