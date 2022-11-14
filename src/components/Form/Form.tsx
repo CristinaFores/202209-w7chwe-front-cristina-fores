@@ -50,16 +50,18 @@ const Form = () => {
           ></input>
         </FormField>
         <FormField>
-          <label htmlFor="password">Password</label>
-          <input
-            placeholder="Introducela contraseña"
-            id="password"
-            type="password"
-            autoComplete="off"
-            required
-            name="password"
-            onChange={handleInputChange}
-          ></input>
+          <label>
+            Password
+            <input
+              placeholder="Introducela contraseña"
+              id="password"
+              type="password"
+              autoComplete="off"
+              required
+              name="password"
+              onChange={handleInputChange}
+            ></input>
+          </label>
         </FormField>
         <FormActions>
           <ButtonStyled onSubmit={sendUsers}>Entrar</ButtonStyled>

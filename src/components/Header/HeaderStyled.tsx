@@ -3,10 +3,11 @@ import styled from "styled-components";
 export const HeaderStyled = styled.header`
   padding-top: 2rem;
   padding-bottom: 1rem;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   border-bottom: 1px solid #ffffff78;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 `;
 
 export const HeaderTextStyled = styled.h1`
