@@ -66,7 +66,8 @@ const Form = () => {
         <FormActions>
           <ButtonStyled onSubmit={sendUsers}>Entrar</ButtonStyled>
           <li>
-            <a href="/">Registrarse</a>
+            <span>¿No tienes una cuenta?</span>
+            <a href="/"> Regístrate</a>
           </li>
         </FormActions>
       </FormStyled>

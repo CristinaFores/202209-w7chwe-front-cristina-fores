@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import mainTheme from "../../styles/mainTheme";
 
 export const FormStyled = styled.form`
   margin: 0 auto;
@@ -8,13 +9,15 @@ export const FormStyled = styled.form`
   flex-direction: column;
   list-style: none;
   align-items: center;
-  background: rgba(255, 255, 255, 0.3);
-  -webkit-backdrop-filter: blur(5px);
-  backdrop-filter: blur(40px);
-  border: 1.5px solid rgba(209, 213, 219, 0.3);
+  background: rgba(255, 255, 255, 0.282);
+  -webkit-backdrop-filter: blur(200px);
+  backdrop-filter: blur(200px);
+  border: 1.5px solid rgba(209, 213, 219, 0.437);
   gap: 1rem;
   border-radius: 10px;
-  font-size: 1rem;
+  font-size: 1.2rem;
+  font-family: "Montserrat", sans-serif;
+  color: ${mainTheme.backgroundColorPrimary};
 
   label {
     display: flex;
@@ -27,15 +30,30 @@ export const FormStyled = styled.form`
     border: none;
     padding: 10px 10px;
   }
-
+  a {
+    background: linear-gradient(
+        to right,
+        rgba(243, 129, 129, 0.9),
+        rgba(252, 227, 138, 0.9)
+      ),
+      linear-gradient(to right, #ffbf00, #e319f9, rgba(0, 100, 200, 1));
+    background-size: 100% 3px, 0 3px;
+    background-position: 100% 100%, 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size 400ms;
+  }
+  a:hover {
+    background-size: 0 3px, 100% 3px;
+  }
+  /* 
   a:hover::before {
     bottom: 0;
-    height: 100%;
+    height: 20%;
   }
 
-  a ::before {
+  a::before {
     content: "";
-    background-color: hsla(196, 61%, 58%, 0.75);
+    background-color: #f5f5f59e;
     position: absolute;
     left: 0;
     bottom: 3px;
@@ -43,7 +61,7 @@ export const FormStyled = styled.form`
     height: 8px;
     z-index: -1;
     transition: all 0.3s ease-in-out;
-  }
+  } */
 `;
 
 export const FormField = styled.div`
