@@ -50,7 +50,7 @@ const Form = () => {
           ></input>
         </FormField>
         <FormField>
-          <label>Password</label>
+          <label htmlFor="password">Password</label>
           <input
             placeholder="Introducela contraseña"
             id="password"
