@@ -22,18 +22,18 @@ const useUser = () => {
       },
     });
 
-    const { accessToken } = await response.json();
+    const { token } = await response.json();
 
-    const userLogger: JwtPayloadCustom = decodeToken(accessToken);
+    const userLogger: JwtPayloadCustom = decodeToken(token);
 
     dispatch(
       loginUserActionCreator({
         ...userLogger,
         username: userData.username,
-        token: accessToken,
+        token: token,
       })
     );
-    window.localStorage.setItem("token", accessToken);
+    window.localStorage.setItem("token", token);
   };
   return {
     login,
