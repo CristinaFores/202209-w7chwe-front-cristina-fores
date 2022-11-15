@@ -42,26 +42,10 @@ export const FormStyled = styled.form`
     background-repeat: no-repeat;
     transition: background-size 400ms;
   }
+
   a:hover {
     background-size: 0 3px, 100% 3px;
   }
-  /* 
-  a:hover::before {
-    bottom: 0;
-    height: 20%;
-  }
-
-  a::before {
-    content: "";
-    background-color: #f5f5f59e;
-    position: absolute;
-    left: 0;
-    bottom: 3px;
-    width: 100%;
-    height: 8px;
-    z-index: -1;
-    transition: all 0.3s ease-in-out;
-  } */
 `;
 
 export const FormField = styled.div`
