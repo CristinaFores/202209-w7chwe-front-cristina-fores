@@ -1,9 +1,11 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import useUser, { UserCredencials } from "../../hooks/useUser";
 import { FormStyled, FormField, ButtonStyled, FormActions } from "./FormStyled";
 
-const Form = () => {
+const Form = (): JSX.Element => {
   const { login } = useUser();
+
   const initialUser = {
     username: "",
     password: "",
@@ -29,28 +31,27 @@ const Form = () => {
       username: user.username,
       password: user.password,
     };
-
     await login(userLogin);
-
-    setuser({ username: "", password: "" });
   };
 
   return (
     <>
       <FormStyled onSubmit={sendUsers}>
         <FormField>
-          <label htmlFor="username">Nombre</label>
-          <input
-            id="username"
-            type="text"
-            placeholder="Introduce tu nombre"
-            autoComplete="off"
-            required
-            onChange={handleInputChange}
-          ></input>
+          <label htmlFor="username">
+            Nombre
+            <input
+              id="username"
+              type="text"
+              placeholder="Introduce tu nombre"
+              autoComplete="off"
+              required
+              onChange={handleInputChange}
+            ></input>
+          </label>
         </FormField>
         <FormField>
-          <label>
+          <label htmlFor="password">
             Password
             <input
               placeholder="Introducela contraseña"
@@ -67,7 +68,7 @@ const Form = () => {
           <ButtonStyled onSubmit={sendUsers}>Entrar</ButtonStyled>
           <li>
             <span>¿No tienes una cuenta?</span>
-            <a href="/"> Regístrate</a>
+            <Link to="/register"> Regístrate</Link>
           </li>
         </FormActions>
       </FormStyled>
