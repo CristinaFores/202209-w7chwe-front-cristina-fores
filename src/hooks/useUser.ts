@@ -17,6 +17,9 @@ const useUser = () => {
         username: userData.username,
         password: userData.password,
       }),
+      headers: {
+        "Content-type": "application/json",
+      },
     });
     const { token } = await response.json();
     const userLogger: JwtPayloadCustom = decodeToken(token);
