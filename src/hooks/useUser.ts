@@ -6,7 +6,6 @@ export interface UserCredencials {
   password: string;
   username: string;
 }
-
 const useUser = () => {
   const dispatch = useAppDispatch();
   const apiUrl = process.env.REACT_APP_API_URL;
@@ -17,6 +16,9 @@ const useUser = () => {
         username: userData.username,
         password: userData.password,
       }),
+      headers: {
+        "Content-type": "application/json",
+      },
     });
     const { token } = await response.json();
     const userLogger: JwtPayloadCustom = decodeToken(token);
