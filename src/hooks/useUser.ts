@@ -6,7 +6,6 @@ export interface UserCredencials {
   password: string;
   username: string;
 }
-
 const useUser = () => {
   const dispatch = useAppDispatch();
   const apiUrl = process.env.REACT_APP_API_URL;
