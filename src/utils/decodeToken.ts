@@ -1,9 +1,5 @@
 import jwtDecode from "jwt-decode";
-
-export interface JwtPayloadCustom {
-  id: string;
-  username: string;
-}
+import { JwtPayloadCustom } from "../types/types";
 
 const decodeToken = (token: string) => {
   const jwtPayload: JwtPayloadCustom = jwtDecode(token);
