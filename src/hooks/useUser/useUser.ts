@@ -1,11 +1,8 @@
-import { loginUserActionCreator } from "../redux/features/userSlice/userSlice";
-import { useAppDispatch } from "../redux/hooks";
-import decodeToken, { JwtPayloadCustom } from "../utils/decodeToken";
+import { loginUserActionCreator } from "../../redux/features/userSlice/userSlice";
+import { useAppDispatch } from "../../redux/hooks";
+import { JwtPayloadCustom, UserCredencials } from "../../types/types";
+import decodeToken from "../../utils/decodeToken";
 
-export interface UserCredencials {
-  password: string;
-  username: string;
-}
 const useUser = () => {
   const dispatch = useAppDispatch();
   const apiUrl = process.env.REACT_APP_API_URL;

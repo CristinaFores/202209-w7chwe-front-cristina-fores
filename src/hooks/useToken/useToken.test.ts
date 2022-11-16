@@ -1,11 +1,12 @@
-import { User } from "../redux/features/userSlice/types";
+import { User } from "../../redux/features/userSlice/types";
 
-import { mockInitialStore } from "../mocks/storeMock";
-import ProviderWrapper from "../mocks/ProviderWrapper";
+import { mockInitialStore } from "../../mocks/storeMock";
+import ProviderWrapper from "../../mocks/ProviderWrapper";
 import { renderHook } from "@testing-library/react";
 import useToken from "./useToken";
-import { JwtPayloadCustom } from "../utils/decodeToken";
-import { loginUserActionCreator } from "../redux/features/userSlice/userSlice";
+
+import { loginUserActionCreator } from "../../redux/features/userSlice/userSlice";
+import { JwtPayloadCustom } from "../../types/types";
 
 beforeEach(() => {
   jest.clearAllMocks();

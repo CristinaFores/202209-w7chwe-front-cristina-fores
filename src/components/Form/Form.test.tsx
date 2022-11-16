@@ -6,7 +6,7 @@ import { mockInitialStore } from "../../mocks/storeMock";
 import Form from "./Form";
 const mockSubmit = jest.fn();
 
-jest.mock("../../hooks/useUser", () => {
+jest.mock("../../hooks/useUser/useUser", () => {
   return () => ({
     login: mockSubmit,
   });

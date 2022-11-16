@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import useUser, { UserCredencials } from "../../hooks/useUser";
+import useUser from "../../hooks/useUser/useUser";
+import { UserCredencials } from "../../types/types";
+
 import { FormStyled, FormField, ButtonStyled, FormActions } from "./FormStyled";
 
 const Form = (): JSX.Element => {

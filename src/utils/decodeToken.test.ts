@@ -1,5 +1,5 @@
 import jwtDecode from "jwt-decode";
-import { JwtPayloadCustom } from "./decodeToken";
+import { JwtPayloadCustom } from "../types/types";
 
 describe("Given a decodeToken funcion", () => {
   describe("When it's called with a token encode", () => {

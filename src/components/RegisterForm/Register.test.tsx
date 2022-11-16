@@ -2,11 +2,11 @@ import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { Provider } from "react-redux";
 import { BrowserRouter } from "react-router-dom";
-import useUser from "../../hooks/useUser";
+import useUser from "../../hooks/useUser/useUser";
 import { mockInitialStore } from "../../mocks/storeMock";
 import RegisterForm from "./RegisterForm";
 
-jest.mock("../../hooks/useUser", () => {
+jest.mock("../../hooks/useUser/useUser", () => {
   const register = jest.fn();
   return () => ({ register });
 });

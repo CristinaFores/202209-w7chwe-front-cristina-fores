@@ -1,10 +1,10 @@
 import { renderHook } from "@testing-library/react";
-import ProviderWrapper from "../mocks/ProviderWrapper";
-import { useAppDispatch } from "../redux/hooks";
-import { JwtPayloadCustom } from "../utils/decodeToken";
+import ProviderWrapper from "../../mocks/ProviderWrapper";
+import { useAppDispatch } from "../../redux/hooks";
+import { JwtPayloadCustom } from "../../types/types";
 import useUser from "./useUser";
 
-jest.mock(".././redux/hooks", () => {
+jest.mock("../../redux/hooks", () => {
   const mockDispatch = jest.fn();
   return {
     useAppDispatch: () => mockDispatch,

@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import useUser, { UserCredencials } from "../../hooks/useUser";
+import useUser from "../../hooks/useUser/useUser";
+import { UserCredencials } from "../../types/types";
+
 import {
   ButtonStyled,
   FormActions,
