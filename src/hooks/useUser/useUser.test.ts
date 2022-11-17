@@ -11,11 +11,6 @@ jest.mock("../../redux/hooks", () => {
   };
 });
 
-jest.mock("react-router-dom", () => ({
-  ...jest.requireActual("react-router-dom"),
-  useNavigate: () => jest.fn(),
-}));
-
 const mockUser = {
   username: "habersimesaleya",
   password: "1234567890",
