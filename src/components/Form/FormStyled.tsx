@@ -46,6 +46,31 @@ export const FormStyled = styled.form`
   a:hover {
     background-size: 0 3px, 100% 3px;
   }
+
+  @media (prefers-reduced-motion) {
+    a {
+      transition: none;
+      background: linear-gradient(
+        to right,
+        rgba(243, 129, 129, 0.9),
+        rgba(0, 100, 200, 1)
+      );
+      background-size: 100% 3px, 0 3px;
+      background-position: 100% 100%, 0 100%;
+      background-repeat: no-repeat;
+    }
+    a:hover {
+      background: linear-gradient(
+        to right,
+        rgba(243, 211, 129, 0.951),
+        rgba(243, 129, 129, 0.9)
+      );
+
+      background-size: 100% 3px, 0 3px;
+      background-position: 100% 100%, 0 100%;
+      background-repeat: no-repeat;
+    }
+  }
 `;
 
 export const FormField = styled.div`
