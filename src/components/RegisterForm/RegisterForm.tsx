@@ -42,7 +42,7 @@ const RegisterForm = (): JSX.Element => {
 
     const userRegistered = await register(formDataToSubmit);
     if (userRegistered) {
-      navigate("/home");
+      navigate("/login");
     }
   };
 

@@ -11,6 +11,7 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<Form />} />
+          <Route path="/login" element={<Form />} />
           <Route path="/register" element={<RegisterForm />} />
         </Routes>
       </AppStyled>
