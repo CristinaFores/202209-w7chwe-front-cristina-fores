@@ -2,7 +2,7 @@ import { useCallback } from "react";
 import { useAppDispatch } from "../../redux/hooks";
 import axios from "axios";
 import { loadUserListActionCreator } from "../../redux/features/loadUsers/userLoad";
-import { UsersApi } from "../../redux/features/loadUsers/types";
+import { UsersApi } from "./types";
 
 const useApi = () => {
   const dispatch = useAppDispatch();
