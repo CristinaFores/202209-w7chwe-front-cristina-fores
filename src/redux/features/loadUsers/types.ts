@@ -5,3 +5,7 @@ export interface UserStructure {
 export interface UserListState {
   list: UserStructure[];
 }
+
+export interface UsersApi {
+  users: UserStructure[];
+}
