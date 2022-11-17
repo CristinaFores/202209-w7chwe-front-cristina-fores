@@ -1,7 +1,6 @@
 import { renderHook } from "@testing-library/react";
-import mockLoadUsersResponse from "../../mocks/listUserMock";
 import ProviderWrapper from "../../mocks/ProviderWrapper";
-import { loadUserListActionCreator } from "../../redux/features/loadUsers/userLoad";
+
 import { useAppDispatch } from "../../redux/hooks";
 
 import useApi from "./useApi";
@@ -28,9 +27,6 @@ describe("Given the useApi custom hook", () => {
       await loadUsers();
 
       expect(dispatch).toHaveBeenCalledTimes(1);
-      expect(dispatch).toHaveBeenCalledWith(
-        loadUserListActionCreator(mockLoadUsersResponse)
-      );
     });
   });
 });
